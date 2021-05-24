@@ -1,1 +1,0 @@
-#ihor-testnet
