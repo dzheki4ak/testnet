@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './MainPage.scss';
 
@@ -12,9 +13,21 @@ const MainPage = () => {
       </h2>
       <p className="main__page_greeting">What would you like to do?</p>
       <div className="main__page_buttons">
-        <button className="main__page_buttons-btn">Check transactions</button>
-        <button className="main__page_buttons-btn">Check ballance</button>
-        <button className="main__page_buttons-btn">Send money</button>
+        <button className="main__page_buttons-btn btn">
+          <Link to="/any" className="link">
+            Check transactions
+          </Link>
+        </button>
+        <button className="main__page_buttons-btn btn">
+          <Link to="/any" className="link">
+            Check ballance
+          </Link>
+        </button>
+        <button className="main__page_buttons-btn btn">
+          <Link to="/error" className="link">
+            Send money
+          </Link>
+        </button>
       </div>
     </div>
   );
