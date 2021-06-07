@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import 'vars.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: $main-font-fam;
+  background-color: $bg-color;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  color: $text-color;
+}
+
+.error__page,
+.balance__page {
+  text-align: center;
+
+  &_header {
+    color: $btn-color;
+    text-shadow: $txt-shadow;
+  }
+}

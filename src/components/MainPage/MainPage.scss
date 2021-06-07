@@ -1,0 +1,19 @@
+@import 'src/vars.scss'; 
+
+.main__page {
+  &_header {
+    &-span {
+      color: $btn-color;
+      text-shadow: $txt-shadow;
+    }
+  }
+  &_greeting {
+    text-align: center;
+  }
+
+  &_buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+  }
+}
