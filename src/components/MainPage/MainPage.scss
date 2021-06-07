@@ -1,8 +1,10 @@
+@import 'src/vars.scss'; 
+
 .main__page {
   &_header {
     &-span {
-      color: #856a94;
-      text-shadow: 7px -2px 5px rgba(133, 106, 148, 0.88);
+      color: $btn-color;
+      text-shadow: $txt-shadow;
     }
   }
   &_greeting {

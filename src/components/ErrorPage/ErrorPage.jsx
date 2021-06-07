@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { HOME } from '../../routes';
+
+import NavLink from '../NavLinks/NavLink.jsx';
 
 import './ErrorPage.scss';
 
@@ -10,7 +13,7 @@ const ErrorPage = () => (
       Service is temporarily unavailable
     </h3>
     <p className="error__page_advise">Please try again later</p>
-    <button className="error__page_btn btn"><Link to="/" className="link">Home</Link></button>
+    <NavLink text={`Home`} route={HOME} />
   </div>
 );
 

@@ -1,8 +1,6 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { xactionsReducer } from './reducer.js';
-
-const reducer = combineReducers({ xactionsList: xactionsReducer });
+import reducer from './modules/reducers';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
