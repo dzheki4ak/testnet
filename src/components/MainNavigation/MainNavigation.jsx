@@ -9,8 +9,6 @@ import NotFoundPage from '../NotFoundPage/NotFoundPage.jsx';
 
 import * as Routes from '../../routes';
 
-
-
 const MainNavigation = () => {
   const { HOME, ERROR, NOT_FOUND, BALANCE } = Routes;
   return (
