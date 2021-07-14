@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import { user } from '../../redux/modules/transactionsList/gateway';
+import { user } from '../../redux/modules/transactionsList/saga';
 import * as Routes from '../../routes';
 
 import NavLink from '../NavLinks/NavLink.jsx';
 
+
 import './MainPage.scss';
 
 const MainPage = () => {
+
   const { ERROR, NOT_FOUND, BALANCE } = Routes;
+
   return (
     <div className="main__page">
       <h2 className="main__page_header">
