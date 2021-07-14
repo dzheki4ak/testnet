@@ -1,25 +1,22 @@
 import React from 'react';
 
+import { useSelector } from 'react-redux';
+
 import { HOME } from '../../routes';
 
+import { transactionsTotalsSelector } from '../../redux/modules/transactionsList/selectors';
+import * as helpers from '../../helpers';
 import NavLink from '../NavLinks/NavLink.jsx';
 
-const { useSelector } = require('react-redux');
-
 const BalancePage = () => {
-  const list = useSelector(state => state.transactionsList.transactionsList);
+  const list = useSelector(transactionsTotalsSelector);
 
-  const totalInputs = list
-    .map(trns => trns.inputs)
-    .flat()
-    .map(input => input.output_value)
-    .reduce((inVal, inAcc) => inVal + inAcc);
+  const { totalsCalculation, inputs, outputs, inputValue, outputValue } =
+    helpers;
 
-  const totalOutputs = list
-    .map(trns => trns.outputs)
-    .flat()
-    .map(output => output.value)
-    .reduce((outVal, outAcc) => outVal + outAcc);
+  const totalInputs = totalsCalculation(list, inputs, inputValue);
+
+  const totalOutputs = totalsCalculation(list, outputs, outputValue);
 
   return (
     <div className="balance__page">
