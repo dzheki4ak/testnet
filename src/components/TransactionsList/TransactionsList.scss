@@ -1,0 +1,39 @@
+@import 'src/vars.scss';
+
+.transactions {
+  text-align: center;
+
+  &_list {
+    list-style-type: none;
+    display: block;
+    padding: 0;
+    text-align: left;
+
+    &__item {
+      border: 2px solid $btn-color;
+      border-radius: 5px;
+      margin: 16px 0;
+      padding: 16px;
+      &-span {
+        display: block;
+        margin: 4px;
+      }
+
+      &-info {
+        color: $btn-color;
+        text-shadow: $txt-shadow;
+      }
+
+      &-link {
+        color: $btn-color;
+        &:hover {
+          color: $link-color;
+        }
+      }
+    }
+  }
+}
+
+.trans_link {
+  text-align: right;
+}

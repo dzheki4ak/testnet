@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { user } from '../../redux/modules/transactionsList/saga';
 import * as Routes from '../../routes';
@@ -10,7 +10,7 @@ import './MainPage.scss';
 
 const MainPage = () => {
 
-  const { ERROR, NOT_FOUND, BALANCE } = Routes;
+  const { ERROR, BALANCE, TRANSACTIONS } = Routes;
 
   return (
     <div className="main__page">
@@ -19,7 +19,7 @@ const MainPage = () => {
       </h2>
       <p className="main__page_greeting">What would you like to do?</p>
       <div className="main__page_buttons">
-        <NavLink text={`Check transactions`} route={NOT_FOUND} />
+        <NavLink text={`Check transactions`} route={TRANSACTIONS} />
         <NavLink text={`Check ballance`} route={BALANCE} />
         <NavLink text={`Send money`} route={ERROR} />
       </div>
