@@ -20,7 +20,7 @@ import './BalancePage.scss';
 const BalancePage = () => {
   const list = useSelector(transactionsTotalsSelector);
 
-  if (list.length) {
+  if (list.length < 1) {
     return <Spinner />;
   }
 
