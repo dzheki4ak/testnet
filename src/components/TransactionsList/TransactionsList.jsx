@@ -10,7 +10,7 @@ const TransactionsList = () => (
     <ul className="transactions_list">
       <TransactionsListItem />
     </ul>
-    <NavLink text={`Home`} route={HOME} />
+    <NavLink text="Home" route={HOME} />
   </div>
 );
 

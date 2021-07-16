@@ -7,6 +7,7 @@ const TransactionDetailsList = ({ operations }) => (
       {operations.map(opr => {
         const { output_value, value, hash } = opr;
         const [address] = opr.addresses;
+        
         return (
           <li key={hash}>
             <span className="transactions_list__item-span">

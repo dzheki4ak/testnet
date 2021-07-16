@@ -47,8 +47,8 @@ const TransactionDetails = ({ location }) => {
       </div>
 
       <div className="main__page_buttons">
-        <NavLink text={`Back`} route={TRANSACTIONS} />
-        <NavLink text={`Home`} route={HOME} />
+        <NavLink text="Back" route={TRANSACTIONS} />
+        <NavLink text="Home" route={HOME} />
       </div>
     </div>
   );

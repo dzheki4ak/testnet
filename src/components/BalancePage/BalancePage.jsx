@@ -34,7 +34,7 @@ const BalancePage = () => {
         Total received:
         <span className="main__page_header-span">{` ${totalInputs} 💲`}</span>
       </h3>
-      <NavLink text={`Home`} route={HOME} />
+      <NavLink text="Home" route={HOME} />
     </div>
   );
 };
