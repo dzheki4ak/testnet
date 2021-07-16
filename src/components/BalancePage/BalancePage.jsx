@@ -5,14 +5,24 @@ import { useSelector } from 'react-redux';
 import { HOME } from '../../routes';
 
 import { transactionsTotalsSelector } from '../../redux/modules/transactionsList/selectors';
-import * as helpers from '../../helpers';
+import {
+  totalsCalculation,
+  inputs,
+  outputs,
+  inputValue,
+  outputValue,
+} from '../../helpers';
 import NavLink from '../NavLinks/NavLink.jsx';
+import Spinner from '../Spinner/Spinner.jsx';
+
+import './BalancePage.scss';
 
 const BalancePage = () => {
   const list = useSelector(transactionsTotalsSelector);
 
-  const { totalsCalculation, inputs, outputs, inputValue, outputValue } =
-    helpers;
+  if (list.length) {
+    return <Spinner />;
+  }
 
   const totalInputs = totalsCalculation(list, inputs, inputValue);
 

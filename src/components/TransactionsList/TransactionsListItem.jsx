@@ -5,11 +5,16 @@ import moment from 'moment';
 
 import { transactionsTotalsSelector } from '../../redux/modules/transactionsList/selectors';
 import { DETAILS } from '../../routes';
+import Spinner from '../Spinner/Spinner.jsx';
 
 import './TransactionsList.scss';
 
 const TransactionsListItem = () => {
   const list = useSelector(transactionsTotalsSelector);
+
+  if (list.length < 1) {
+    return <Spinner />;
+  }
 
   return list.map(transaction => {
     const { hash, total, confirmed } = transaction;
