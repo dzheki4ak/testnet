@@ -13,7 +13,7 @@ const ErrorPage = () => (
       Service is temporarily unavailable
     </h3>
     <p className="error__page_advise">Please try again later</p>
-    <NavLink text={`Home`} route={HOME} />
+    <NavLink text="Home" route={HOME} />
   </div>
 );
 

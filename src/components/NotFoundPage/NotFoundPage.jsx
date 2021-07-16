@@ -11,7 +11,7 @@ const NotFoundPage = () => (
     <p className="error__page_advise">
       Please verify the address you've enterred and try again
     </p>
-    <NavLink text={`Home`} route={HOME} />
+    <NavLink text="Home" route={HOME} />
   </div>
 );
 
