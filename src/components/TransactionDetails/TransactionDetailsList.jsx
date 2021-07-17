@@ -1,4 +1,5 @@
 import React from 'react';
+
 import TransactionDetailsListItem from './TransactionDetailsListItem.jsx';
 
 const TransactionDetailsList = ({ operations }) => (

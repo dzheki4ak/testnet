@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React from 'react';
 
 const TransactionDetailsListItem = ({ operations }) => (

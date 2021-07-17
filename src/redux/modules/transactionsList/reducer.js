@@ -1,7 +1,7 @@
 import { FETCHED } from './actions.js';
 
 const initialState = {
-  transactionsList: [],
+  data: []
 };
 
 export const transactionsReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ export const transactionsReducer = (state = initialState, action) => {
     case FETCHED:
       return {
         ...state,
-        transactionsList: action.payload,
+        data: action.payload,
       };
     default:
       return state;
