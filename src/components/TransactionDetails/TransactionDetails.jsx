@@ -7,7 +7,6 @@ import { transactionsTotalsSelector } from '../../redux/modules/transactionsList
 import NavLink from '../NavLinks/NavLink.jsx';
 import TransactionDetailsList from './TransactionDetailsList.jsx';
 import Spinner from '../Spinner/Spinner.jsx';
-import TransactionsWrapper from '../TransactionsWrapper/TransactionsWrapper.jsx';
 
 import { HOME, TRANSACTIONS } from '../../routes';
 
