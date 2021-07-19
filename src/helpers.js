@@ -8,4 +8,4 @@ export const totalsCalculation = (transList, transType, transValue) =>
     .map(trns => trns[transType])
     .flat()
     .map(transact => transact[transValue])
-    .reduce((val, acc) => val + acc);
+    .reduce((val, acc) => val + acc, 0);

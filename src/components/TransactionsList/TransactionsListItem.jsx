@@ -5,41 +5,46 @@ import moment from 'moment';
 
 import { transactionsTotalsSelector } from '../../redux/modules/transactionsList/selectors';
 import { DETAILS } from '../../routes';
+import TransactionsWrapper from '../TransactionsWrapper/TransactionsWrapper.jsx';
 
 import './TransactionsList.scss';
 
 const TransactionsListItem = () => {
   const list = useSelector(transactionsTotalsSelector);
 
-  return list.map(transaction => {
-    const { hash, total, confirmed } = transaction;
-    const dateConfirmed = moment(confirmed).format('YYYY-MM-DD HH:mm');
+  return (
+    <TransactionsWrapper list={list}>
+      {list.map(transaction => {
+        const { hash, total, confirmed } = transaction;
+        const dateConfirmed = moment(confirmed).format('YYYY-MM-DD HH:mm');
 
-    return (
-      <li className="transactions_list__item" key={hash}>
-        <span className="transactions_list__item-span">
-          Transaction ID:{' '}
-          <span className="transactions_list__item-info">{` ${hash}`}</span>{' '}
-        </span>
-        <span className="transactions_list__item-span">
-          Transaction total:{' '}
-          <span className="transactions_list__item-info">{` ${total}`}</span>
-        </span>
-        <span className="transactions_list__item-span">
-          Date confirmed:{' '}
-          <span className="transactions_list__item-info">{` ${dateConfirmed}`}</span>
-        </span>
-        <span className="transactions_list__item-span trans_link">
-          <Link
-            to={`${DETAILS}/${hash}`}
-            className="transactions_list__item-link"
-          >
-            More details...
-          </Link>
-        </span>
-      </li>
-    );
-  });
+        return (
+          <li className="transactions_list__item" key={hash}>
+            <span className="transactions_list__item-span">
+              Transaction ID:{' '}
+              <span className="transactions_list__item-info">{` ${hash}`}</span>{' '}
+            </span>
+            <span className="transactions_list__item-span">
+              Transaction total:{' '}
+              <span className="transactions_list__item-info">{` ${total}`}</span>
+            </span>
+            <span className="transactions_list__item-span">
+              Date confirmed:{' '}
+              <span className="transactions_list__item-info">{` ${dateConfirmed}`}</span>
+            </span>
+            <span className="transactions_list__item-span trans_link">
+              <Link
+                to={`${DETAILS}/${hash}`}
+                className="transactions_list__item-link"
+              >
+                More details...
+              </Link>
+            </span>
+          </li>
+        );
+      })}
+    </TransactionsWrapper>
+  );
 };
 
 export default TransactionsListItem;

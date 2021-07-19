@@ -1,2 +1,2 @@
 export const transactionsTotalsSelector = state =>
-  state.transactionsList.transactionsList;
+  state.transactionsList.data;

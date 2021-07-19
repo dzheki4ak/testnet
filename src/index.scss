@@ -6,9 +6,7 @@
 }
 
 #root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
 }
 
 body {
@@ -20,10 +18,20 @@ body {
   color: $text-color;
 }
 
+.balance__page,
 .error__page,
-.balance__page {
-  text-align: center;
+.transactions_list__page,
+.main__page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.error__page,
+.balance__page, .transactions_list__page {
+  text-align: center;
+  align-items: center;
   &_header {
     color: $btn-color;
     text-shadow: $txt-shadow;
