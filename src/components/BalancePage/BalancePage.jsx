@@ -13,7 +13,6 @@ import {
   outputValue,
 } from '../../helpers';
 import NavLink from '../NavLinks/NavLink.jsx';
-import Spinner from '../Spinner/Spinner.jsx';
 import TransactionsWrapper from '../TransactionsWrapper/TransactionsWrapper.jsx';
 
 import './BalancePage.scss';
@@ -25,13 +24,15 @@ const BalancePage = () => {
 
   const totalOutputs = totalsCalculation(list, outputs, outputValue);
 
+  const balance = totalInputs - totalOutputs;
+
   return (
     <TransactionsWrapper list={list}>
       <div className="balance__page">
         <h1 className="balance__page_balance">
           Your current balance is:
           <span className="main__page_header-span">{` ${
-            totalInputs - totalOutputs
+            balance
           } 💲`}</span>
         </h1>
         <h3 className="balance__page_spent">
